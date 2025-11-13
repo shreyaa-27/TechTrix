@@ -60,7 +60,13 @@ animateElements.forEach((el) => observer.observe(el));
 
 const parallaxElements = selectAll("[data-parallax]");
 
+let parallaxActive = true;
+
 const applyParallax = () => {
+  if (!parallaxActive) {
+    return;
+  }
+
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isMobileViewport = window.innerWidth < 768;
 
@@ -69,7 +75,6 @@ const applyParallax = () => {
 
   parallaxElements.forEach((element) => {
     if (prefersReducedMotion || isMobileViewport) {
-      element.style.transform = "";
       return;
     }
 
@@ -87,6 +92,22 @@ const applyParallax = () => {
   });
 };
 
+const updateParallaxState = () => {
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isMobileViewport = window.innerWidth < 768;
+  const shouldDisable = prefersReducedMotion || isMobileViewport;
+
+  if (shouldDisable && parallaxActive) {
+    parallaxElements.forEach((element) => {
+      element.style.transform = "";
+    });
+    parallaxActive = false;
+  } else if (!shouldDisable && !parallaxActive) {
+    parallaxActive = true;
+    applyParallax();
+  }
+};
+
 const handleScroll = () => {
   if (window.scrollY > window.innerHeight * 0.5) {
     backToTop.classList.add("visible");
@@ -94,6 +115,7 @@ const handleScroll = () => {
     backToTop.classList.remove("visible");
   }
   setActiveLink();
+  updateParallaxState();
   applyParallax();
 };
 
@@ -292,12 +314,14 @@ const init = () => {
   drawParticles();
   handleScroll();
   setActiveLink();
+  updateParallaxState();
   applyParallax();
 };
 
 window.addEventListener("resize", () => {
   resizeCanvas();
   initParticles();
+  updateParallaxState();
   applyParallax();
 });
 
