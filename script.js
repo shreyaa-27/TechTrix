@@ -61,26 +61,25 @@ animateElements.forEach((el) => observer.observe(el));
 const parallaxElements = selectAll("[data-parallax]");
 
 const applyParallax = () => {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    return;
-  }
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isMobileViewport = window.innerWidth < 768;
 
   const scrollY = window.scrollY;
   const windowHeight = window.innerHeight;
-  const isMobile = window.innerWidth < 768;
 
   parallaxElements.forEach((element) => {
+    if (prefersReducedMotion || isMobileViewport) {
+      element.style.transform = "";
+      return;
+    }
+
     const rect = element.getBoundingClientRect();
     const elementTop = rect.top + scrollY;
     const elementCenter = elementTop + rect.height / 2;
     const viewportCenter = scrollY + windowHeight / 2;
     const distance = viewportCenter - elementCenter;
-    let speed = parseFloat(element.getAttribute("data-parallax")) || 0.2;
-    
-    if (isMobile) {
-      speed *= 0.5;
-    }
-    
+    const speed = parseFloat(element.getAttribute("data-parallax")) || 0.2;
+
     const offset = distance * speed;
     const clampedOffset = Math.max(-100, Math.min(100, offset));
 
@@ -299,6 +298,7 @@ const init = () => {
 window.addEventListener("resize", () => {
   resizeCanvas();
   initParticles();
+  applyParallax();
 });
 
 init();
