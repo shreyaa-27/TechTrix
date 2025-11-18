@@ -21,18 +21,6 @@
   box-sizing: border-box;
 }
 
-[data-parallax] {
-  will-change: transform;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  [data-parallax] {
-    transform: none !important;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
