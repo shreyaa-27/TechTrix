@@ -82,7 +82,11 @@ body {
   background: rgba(5, 8, 25, 0.6);
   border-bottom: 1px solid rgba(66, 229, 255, 0.12);
 }
-
+.navbar
+{
+position: fixed;
+width: 100%;
+}
 .brand {
   display: flex;
   align-items: center;
