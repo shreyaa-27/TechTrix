@@ -58,56 +58,6 @@ const observer = new IntersectionObserver(
 
 animateElements.forEach((el) => observer.observe(el));
 
-const parallaxElements = selectAll("[data-parallax]");
-
-let parallaxActive = true;
-
-const applyParallax = () => {
-  if (!parallaxActive) {
-    return;
-  }
-
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const isMobileViewport = window.innerWidth < 768;
-
-  const scrollY = window.scrollY;
-  const windowHeight = window.innerHeight;
-
-  parallaxElements.forEach((element) => {
-    if (prefersReducedMotion || isMobileViewport) {
-      return;
-    }
-
-    const rect = element.getBoundingClientRect();
-    const elementTop = rect.top + scrollY;
-    const elementCenter = elementTop + rect.height / 2;
-    const viewportCenter = scrollY + windowHeight / 2;
-    const distance = viewportCenter - elementCenter;
-    const speed = parseFloat(element.getAttribute("data-parallax")) || 0.2;
-
-    const offset = distance * speed;
-    const clampedOffset = Math.max(-100, Math.min(100, offset));
-
-    element.style.transform = `translate3d(0, ${clampedOffset}px, 0)`;
-  });
-};
-
-const updateParallaxState = () => {
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const isMobileViewport = window.innerWidth < 768;
-  const shouldDisable = prefersReducedMotion || isMobileViewport;
-
-  if (shouldDisable && parallaxActive) {
-    parallaxElements.forEach((element) => {
-      element.style.transform = "";
-    });
-    parallaxActive = false;
-  } else if (!shouldDisable && !parallaxActive) {
-    parallaxActive = true;
-    applyParallax();
-  }
-};
-
 const handleScroll = () => {
   if (window.scrollY > window.innerHeight * 0.5) {
     backToTop.classList.add("visible");
@@ -115,8 +65,6 @@ const handleScroll = () => {
     backToTop.classList.remove("visible");
   }
   setActiveLink();
-  updateParallaxState();
-  applyParallax();
 };
 
 let ticking = false;
@@ -314,15 +262,11 @@ const init = () => {
   drawParticles();
   handleScroll();
   setActiveLink();
-  updateParallaxState();
-  applyParallax();
 };
 
 window.addEventListener("resize", () => {
   resizeCanvas();
   initParticles();
-  updateParallaxState();
-  applyParallax();
 });
 
 init();
