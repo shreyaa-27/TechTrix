@@ -669,7 +669,7 @@ nav {
   }
 
   .hero {
-    padding-top: 5.5rem;
+    padding-top: 5.75rem;
   }
 
   .section {
@@ -691,19 +691,19 @@ nav {
   }
 
   .hero-logo-corner {
-    width: clamp(60px, 24vw, 100px);
-    top: 0.5rem;
+    width: clamp(50px, 18vw, 80px);
+    top: 1rem;
   }
 
   .hero-logo-left {
-    width: clamp(75px, 28vw, 110px);
-    left: 0.5rem;
+    width: clamp(60px, 22vw, 90px);
+    left: 0.25rem;
   }
 
   .hero-logo-right {
-    top: 1.4rem;
-    right: 0.5rem;
-    width: clamp(70px, 26vw, 105px);
+    top: 1.75rem;
+    right: 0.25rem;
+    width: clamp(55px, 20vw, 85px);
   }
 
   .back-to-top {
