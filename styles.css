@@ -698,6 +698,7 @@ nav {
   .hero-logo-left {
     width: clamp(60px, 22vw, 90px);
     left: 0.45rem;
+    top: 2.2rem;
   }
 
   .hero-logo-right {
