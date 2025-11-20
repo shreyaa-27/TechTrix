@@ -1,227 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechTrix 2025 | A Battle of Logic, Code & Creativity</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1B4vcPDeY9qOivGi99Z0eK6Ff1gxm+b07fG2IG7C7iZRKq3TTGP8XwY3YxxPp2RDwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div id="background">
-      <canvas id="particle-canvas" aria-hidden="true"></canvas>
-      <div class="glow-layer" data-parallax="0.3"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechTrix 2025 | A Battle of Logic, Code & Creativity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1B4vcPDeY9qOivGi99Z0eK6Ff1gxm+b07fG2IG7C7iZRKq3TTGP8XwY3YxxPp2RDwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="background">
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="glow-layer" data-parallax="0.3"></div>
+  </div>
+  <header class="navbar">
+    <div class="brand">
+      <span class="brand-name">TechTrix </span>
     </div>
-    <header class="navbar">
-      <div class="brand">
-        <span class="brand-name">TechTrix </span>
+    <nav>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#highlights">Highlights</a></li>
+        <li><a href="#why">Why Join</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="section hero">
+      <div class="hero-content" data-animate="fade-up" data-parallax="0.5">
+        <p class="hero-badge">Inter-College Tech Fest</p>
+        <h1>TechTrix
+        </h1>
+        <h2> A Battle of Logic, Code & Creativity</h2>
+        <p class="subtitle">Think. Decode. Create. Win.</p>
+        <p class="event-meta">
+          December-05, 2025 &bull; PES College of Engineering, Mandya
+        </p>
+        <div class="cta-group">
+          <a class="btn primary" href="https://forms.gle/udvggvquX6NjLBqEA" target="_blank"
+            rel="noopener noreferrer">Register Now</a>
+          <a class="btn secondary" href="rule_book.pdf" target="_blank" rel="noopener noreferrer">View Rulebook</a>
+        </div>
       </div>
-      <nav>
-        <button class="menu-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#highlights">Highlights</a></li>
-          <li><a href="#why">Why Join</a></li>
-          <li><a href="#register">Register</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    </section>
 
-    <main>
-      <section id="hero" class="section hero">
-        <div class="hero-content" data-animate="fade-up" data-parallax="0.5">
-          <p class="hero-badge">Inter-College Tech Fest</p>
-          <h1>TechTrix
-          </h1>
-          <h2> A Battle of Logic, Code & Creativity</h2>
-          <p class="subtitle">Think. Decode. Create. Win.</p>
-          <p class="event-meta">
-            November x–x, 2025 &bull; PES College of Engineering, Mandya
-          </p>
-          <div class="cta-group">
-            <a
-              class="btn primary"
-              href="https://forms.gle/ER6hX2nbPfJuV1898"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Register Now</a
-            >
-            <a
-              class="btn secondary"
-              href="rule_book.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              >View Rulebook</a
-            >
-          </div>
-        </div>
-      </section>
+    <section id="about" class="section about">
+      <div class="section-header" data-animate="fade-up">
+        <h2>About TechTrix</h2>
+        <p>
+          TechTrix is an inter-college competition blending logic, technology,
+          and creativity. From cracking codes to solving digital trails and
+          pitching imaginative ideas — it’s the ultimate test of brainpower
+          and innovation.
+        </p>
+      </div>
+    </section>
 
-      <section id="about" class="section about">
-        <div class="section-header" data-animate="fade-up">
-          <h2>About TechTrix</h2>
-          <p>
-            TechTrix is an inter-college competition blending logic, technology,
-            and creativity. From cracking codes to solving digital trails and
-            pitching imaginative ideas — it’s the ultimate test of brainpower
-            and innovation.
-          </p>
-        </div>
-        <div class="icon-grid">
-          <div class="icon-card" data-animate="zoom-in" data-parallax="0.2">
-            <i class="fa-solid fa-brain"></i>
-            <span>Logic</span>
-          </div>
-          <div class="icon-card" data-animate="zoom-in" data-parallax="0.25">
-            <i class="fa-solid fa-lightbulb"></i>
-            <span>Innovation</span>
-          </div>
-          <div class="icon-card" data-animate="zoom-in" data-parallax="0.2">
-            <i class="fa-solid fa-people-group"></i>
-            <span>Teamwork</span>
-          </div>
-          <div class="icon-card" data-animate="zoom-in" data-parallax="0.25">
-            <i class="fa-solid fa-pen-ruler"></i>
-            <span>Creativity</span>
-          </div>
-        </div>
-      </section>
+    <section id="highlights" class="section highlights">
+      <div class="section-header" data-animate="fade-up">
+        <h2>Event Highlights</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card" data-animate="fade-up" data-parallax="0.15">
+          <h3>Round 1</h3>
+          <p>The Pattern Probe — Crack the hidden logic.</p>
+        </article>
+        <article class="card" data-animate="fade-up" data-parallax="0.2">
+          <h3>Round 2</h3>
+          <p>The Digital Trail — Solve clues, chase the code.</p>
+        </article>
+        <article class="card" data-animate="fade-up" data-parallax="0.15">
+          <h3>Round 3</h3>
+          <p>Virtual Bug Escape Room: Debug Your Way To Freedom</p>
+        </article>
+      </div>
+    </section>
 
-      <section id="highlights" class="section highlights">
-        <div class="section-header" data-animate="fade-up">
-          <h2>Event Highlights</h2>
+    <section id="why" class="section why">
+      <div class="section-header" data-animate="fade-up">
+        <h2>Why Join?</h2>
+        <p>
+          Because TechTrix isn’t just a competition — it’s an adventure
+          through logic and creativity.
+        </p>
+      </div>
+      <div class="icon-grid">
+        <div class="icon-card" data-animate="zoom-in" data-parallax="0.2">
+          <i class="fa-solid fa-puzzle-piece"></i>
+          <span>Logic</span>
         </div>
-        <div class="card-grid">
-          <article class="card" data-animate="fade-up" data-parallax="0.15">
-            <h3>Round 1</h3>
-            <p>The Pattern Probe — Crack the hidden logic.</p>
-          </article>
-          <article class="card" data-animate="fade-up" data-parallax="0.2">
-            <h3>Round 2</h3>
-            <p>The Digital Trail — Solve clues, chase the code.</p>
-          </article>
-          <article class="card" data-animate="fade-up" data-parallax="0.15">
-            <h3>Round 3</h3>
-            <p>Virtual Bug Escape Room: Debug Your Way To Freedom</p>
-          </article>
+        <div class="icon-card" data-animate="zoom-in" data-parallax="0.25">
+          <i class="fa-solid fa-flask"></i>
+          <span>Digital Trail</span>
         </div>
-      </section>
+        <div class="icon-card" data-animate="zoom-in" data-parallax="0.2">
+          <i class="fa-solid fa-face-grin-stars"></i>
+          <span>Fun</span>
+        </div>
+        <div class="icon-card" data-animate="zoom-in" data-parallax="0.25">
+          <i class="fa-solid fa-trophy"></i>
+          <span>Prizes</span>
+        </div>
+      </div>
+    </section>
 
-      <section id="why" class="section why">
-        <div class="section-header" data-animate="fade-up">
-          <h2>Why Join?</h2>
-          <p>
-            Because TechTrix isn’t just a competition — it’s an adventure
-            through logic and creativity.
-          </p>
+    <section id="register" class="section register">
+      <div class="callout" data-animate="fade-up" data-parallax="0.3">
+        <h2>Ready to Compete?</h2>
+        <div class="cta-group">
+          <a class="btn primary" href="https://forms.gle/udvggvquX6NjLBqEA" target="_blank"
+            rel="noopener noreferrer">Register Now</a>
+          <a class="btn secondary" href="rule_book.pdf" target="_blank" rel="noopener noreferrer">Download Rulebook</a>
         </div>
-        <div class="icon-grid">
-          <div class="icon-card" data-animate="zoom-in" data-parallax="0.2">
-            <i class="fa-solid fa-puzzle-piece"></i>
-            <span>Logic</span>
-          </div>
-          <div class="icon-card" data-animate="zoom-in" data-parallax="0.25">
-            <i class="fa-solid fa-flask"></i>
-            <span>Innovation</span>
-          </div>
-          <div class="icon-card" data-animate="zoom-in" data-parallax="0.2">
-            <i class="fa-solid fa-face-grin-stars"></i>
-            <span>Fun</span>
-          </div>
-          <div class="icon-card" data-animate="zoom-in" data-parallax="0.25">
-            <i class="fa-solid fa-trophy"></i>
-            <span>Prizes</span>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-header" data-animate="fade-up">
+        <h2>Get in Touch</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card" data-animate="fade-right" data-parallax="0.2">
+          <i class="fa-brands fa-instagram"></i>
+          <div>
+            <h3>Instagram</h3>
+            <p><a href="https://www.instagram.com/tachyon.club.pesce?igsh=MWthMWY5d2U5aW8yZA==" target="_blank" rel="noopener">@tachyon.club.pesce</a></p>
           </div>
         </div>
-      </section>
-
-      <section id="register" class="section register">
-        <div class="callout" data-animate="fade-up" data-parallax="0.3">
-          <h2>Ready to Compete?</h2>
-          <div class="cta-group">
-            <a
-              class="btn primary"
-              href="https://forms.gle/ER6hX2nbPfJuV1898"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Register Now</a
-            >
-            <a
-              class="btn secondary"
-              href="rule_book.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Download Rulebook</a
-            >
+        <div class="contact-card" data-animate="fade-right" data-parallax="0.15">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div>
+            <h3>WhatsApp</h3>
+            <p><a href="https://wa.me/916361387070" target="_blank" rel="noopener">+91 6361387070</a></p>
+            <p><a href="https://wa.me/919964308682" target="_blank" rel="noopener">+91 9964308682</a></p>
           </div>
         </div>
-      </section>
-
-      <section id="contact" class="section contact">
-        <div class="section-header" data-animate="fade-up">
-          <h2>Get in Touch</h2>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-card" data-animate="fade-right" data-parallax="0.15">
-            <i class="fa-solid fa-envelope"></i>
-            <div>
-              <h3>Email</h3>
-              <p><a href="mailto:example@email.com">example@email.com</a></p>
-            </div>
-          </div>
-          <div class="contact-card" data-animate="fade-right" data-parallax="0.2">
-            <i class="fa-brands fa-instagram"></i>
-            <div>
-              <h3>Instagram</h3>
-              <p><a href="https://instagram.com/club_handle" target="_blank" rel="noopener">@club_handle</a></p>
-            </div>
-          </div>
-          <div class="contact-card" data-animate="fade-right" data-parallax="0.15">
-            <i class="fa-brands fa-whatsapp"></i>
-            <div>
-              <h3>WhatsApp</h3>
-              <p><a href="https://wa.me/910000000000" target="_blank" rel="noopener">+91 XXXXX XXXXX</a></p>
-            </div>
-          </div>
-          <div class="contact-card" data-animate="fade-right" data-parallax="0.2">
-            <i class="fa-solid fa-building-columns"></i>
-            <div>
-              <h3>College</h3>
-              <p>PES College of Engineering, Mandya</p>
-            </div>
+        <div class="contact-card" data-animate="fade-right" data-parallax="0.2">
+          <i class="fa-solid fa-building-columns"></i>
+          <div>
+            <h3>College</h3>
+            <p>PES College of Engineering, Mandya</p>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <div class="footer-glow"></div>
-      <p>© 2025 TechTrix | Organized by Department of Artificial Intelligence And Machine Learning</p>
-    </footer>
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <p>© 2025 TechTrix | Organized by Department of Artificial Intelligence And Machine Learning</p>
+  </footer>
 
-    <button class="back-to-top" aria-label="Back to top">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
-
