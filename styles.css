@@ -692,17 +692,17 @@ nav {
 
   .hero-logo-corner {
     width: clamp(50px, 18vw, 80px);
-    top: 1rem;
+    top: 1.4rem;
   }
 
   .hero-logo-left {
     width: clamp(60px, 22vw, 90px);
-    left: 0.25rem;
+    left: 0.35rem;
   }
 
   .hero-logo-right {
-    top: 1.75rem;
-    right: 0.25rem;
+    top: 2.15rem;
+    right: 0.35rem;
     width: clamp(55px, 20vw, 85px);
   }
 
