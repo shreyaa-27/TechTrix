@@ -172,6 +172,27 @@ nav {
   text-align: center;
   gap: clamp(1.5rem, 4vw, 2.5rem);
   padding-top: clamp(5rem, 12vw, 7rem);
+  position: relative;
+}
+
+.hero-logo-corner {
+  position: absolute;
+  top: clamp(1rem, 3.5vw, 2.25rem);
+  width: clamp(100px, 15vw, 160px);
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 30px rgba(5, 8, 25, 0.5));
+}
+
+.hero-logo-left {
+  left: clamp(1rem, 4vw, 3rem);
+  width: clamp(120px, 18vw, 180px);
+}
+
+.hero-logo-right {
+  right: clamp(1rem, 4vw, 3rem);
+  top: clamp(2rem, 6vw, 3.75rem);
+  width: clamp(100px, 15vw, 160px);
 }
 
 .hero-content h1 {
@@ -669,9 +690,21 @@ nav {
     width: 100%;
   }
 
+  .hero-logo-corner {
+    width: clamp(80px, 30vw, 140px);
+    top: 0.5rem;
+  }
+
+  .hero-logo-left {
+    width: clamp(95px, 35vw, 160px);
+  }
+
+  .hero-logo-right {
+    top: 1.25rem;
+  }
+
   .back-to-top {
     right: 1rem;
     bottom: 1rem;
   }
 }
-
